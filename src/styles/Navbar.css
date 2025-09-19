@@ -29,7 +29,7 @@
   object-fit: contain;
   position: relative;
   top: 10px;
-  left: 60px;
+  left: 10px;
 }
 /* Nav links wrapper */
 .fp-nav {
@@ -103,7 +103,7 @@
   position: relative;
   top: 15px;
   gap: 10px;
-  margin-right: 60px;
+  margin-right: 20px;
 }
 .fp-social-btn {
   width: 36px;
@@ -156,8 +156,8 @@
   .fp-navbar { margin-left: 16px; margin-right: 16px; }
 }
 @media (max-width: 768px) {
-  .fp-icon { margin-right: 50px; }
-  .fp-logo { left: 50px; }
+  .fp-icon { margin-right: 10px; }
+  .fp-logo { left: 10px; }
 }
 @media (max-width: 425px) {
   .fp-icon { margin-right: 0; }
