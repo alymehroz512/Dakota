@@ -9,6 +9,7 @@ import PreventiveMedicine from "../assets/home/Preventivemedicine.svg";
 import ContactImage from "../assets/home/Contact.gif";
 import FormImage from "../assets/home/Form.gif";
 import "../styles/Home.css";
+
 function Home() {
   // Refs for hero section
   const heroTextRef = useRef(null);
@@ -19,8 +20,10 @@ function Home() {
   // Refs for contact section
   const contactTextRef = useRef(null);
   const contactImgWrapRef = useRef(null);
+
   // State for accordion
   const [activeIndex, setActiveIndex] = useState(null);
+
   // Sync image column height with text content for hero, services, and contact (lg+ only)
   useEffect(() => {
     const syncHeights = () => {
@@ -57,6 +60,7 @@ function Home() {
       window.removeEventListener("resize", syncHeights);
     };
   }, []);
+
   // Services data
   const Services = [
     { id: "healthy", name: "Healthy Living", icon: EmphasizeHealthyLiving },
@@ -64,6 +68,7 @@ function Home() {
     { id: "lifestyle", name: "Lifestyle Medicine", icon: LifestyleMedicine },
     { id: "preventive", name: "Preventive Medicine", icon: PreventiveMedicine },
   ];
+
   // FAQ data
   const FAQs = [
     {
@@ -92,10 +97,12 @@ function Home() {
         "Most sessions last approximately 50 minutes, though this can vary based on your preferences. During your first session, you and your counselor will discuss goals and create a tailored treatment plan.",
     },
   ];
+
   // Toggle accordion item
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   // Form state
   const [formData, setFormData] = useState({
     name: "",
@@ -103,14 +110,17 @@ function Home() {
     subject: "",
     message: "",
   });
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
+
   return (
     <>
       {/* Hero Section */}
@@ -188,7 +198,7 @@ function Home() {
         <div className="container">
           <div className="row justify-content-center">
             <h2 className="services-title mt-5">
-              Our <span className="high-light-words">Key Therapy Services</span>
+              Our Key <span className="high-light-words">Therapy Services</span>
             </h2>
           </div>
           <div className="row services-grid tight-gutters justify-content-center mt-5">
@@ -469,4 +479,5 @@ function Home() {
     </>
   );
 }
+
 export default Home;

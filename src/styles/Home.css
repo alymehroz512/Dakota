@@ -80,7 +80,7 @@
   width: 90%;
   height: 90%;
   background-color: #e6f2fa;
-  border-radius: 50%;
+  border-radius: 0%;
   opacity: 0.8;
 }
 
@@ -93,13 +93,9 @@
   cursor: pointer;
 }
 
-/* .hero-visual:hover .doctor-image {
-  transform: scale(1.02);
-} */
-
 .cta-btn {
   text-transform: uppercase;
-  border-radius: 50px;
+  border-radius: 0%;
   padding: 0.9rem 1.6rem;
   border: 2px solid #1693d3;
   background: #1693d3;
@@ -169,7 +165,7 @@
 .services-grid .service-icon-wrap {
   width: 84px;
   height: 84px;
-  border-radius: 50%;
+  border-radius: 0%;
   background: #1693d3;
   display: grid;
   place-items: center;
@@ -209,29 +205,29 @@
   line-height: 1.7;
   color: #2b2b2b;
   max-width: 58ch;
-  counter-reset: benefit-counter; /* Initialize counter */
+  counter-reset: benefit-counter;
 }
 
 .contact-benefits li {
   position: relative;
-  padding-left: 40px; /* Increased to accommodate larger circle */
+  padding-left: 40px;
   margin-bottom: 10px;
 }
 
 .contact-benefits li::before {
-  content: counter(benefit-counter); /* Use counter for numbering */
-  counter-increment: benefit-counter; /* Increment counter for each li */
+  content: counter(benefit-counter);
+  counter-increment: benefit-counter;
   position: absolute;
   left: 0;
-  color: #ffffff; /* White text for number */
-  background-color: #1693d3; /* Blue background for circle */
-  font-size: 16px; /* Slightly larger font for number */
-  width: 30px; /* Larger circle size */
-  height: 30px; /* Larger circle size */
-  line-height: 30px; /* Center number vertically */
-  text-align: center; /* Center number horizontally */
-  border-radius: 50%; /* Make it circular */
-  display: inline-block; /* Ensure proper sizing */
+  color: #ffffff;
+  background-color: #1693d3;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 0%;
+  display: inline-block;
 }
 
 /* Contact Form Styles */
@@ -278,7 +274,6 @@
   font-size: 16px;
   border: 2px solid #d6edf9;
   border-radius: 8px;
-  /* background: #f3f9fd; */
   color: #2b2b2b;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -291,37 +286,25 @@
 
 .contact-textarea {
   resize: none;
-  height: 150px; /* Fixed height for textarea */
+  height: 150px;
 }
-
-/* .contact-form-img-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #E9F7FF;
-  border-radius: 16px;
-} */
 
 /* ===== Accordion Styles ===== */
 .accordion-item {
   margin-bottom: 24px;
-  border: 2px solid #d6edf9;
-  border-radius: 16px;
-  overflow: hidden;
+  border-bottom: 1px solid #d6edf9;
   background: #ffffff;
-  box-shadow: 0 6px 16px rgba(22, 147, 211, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .accordion-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(22, 147, 211, 0.2);
 }
 
 .accordion-header {
   width: 100%;
   padding: 24px 28px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #141414;
   background: linear-gradient(135deg, #f3f9fd 0%, #e6f2fa 100%);
@@ -354,13 +337,11 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
   background: #1693d3;
   color: #ffffff;
   font-size: 24px;
   font-weight: 800;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(22, 147, 211, 0.3);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -382,7 +363,6 @@
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
   background: #ffffff;
-  border-top: 1px solid rgba(43, 43, 43, 0.2);
   opacity: 0;
 }
 
@@ -394,7 +374,7 @@
 
 .accordion-content p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: #2b2b2b;
 }
@@ -470,7 +450,6 @@
     font-size: 18px;
   }
   .accordion-item {
-    border-radius: 12px;
     margin-bottom: 16px;
   }
   .contact-form-heading {
