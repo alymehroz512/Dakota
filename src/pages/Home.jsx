@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FiPlay, FiPlus, FiMinus, FiSend, FiUser, FiMail, FiTag, FiMessageSquare } from "react-icons/fi";
+import { FiPlay, FiPlus, FiMinus, FiSend, FiUser, FiMail, FiTag, FiMessageSquare, FiCalendar, FiBookOpen, FiHelpCircle } from "react-icons/fi";
 import HeroSectionImage from "../assets/home/Doctor.gif";
 import ServicesImage from "../assets/home/Services.gif";
 import EmphasizeHealthyLiving from "../assets/home/Emphasizehealthyliving.svg";
@@ -9,7 +9,6 @@ import PreventiveMedicine from "../assets/home/Preventivemedicine.svg";
 import ContactImage from "../assets/home/Contact.gif";
 import FormImage from "../assets/home/Form.gif";
 import "../styles/Home.css";
-
 function Home() {
   // Refs for hero section
   const heroTextRef = useRef(null);
@@ -70,7 +69,7 @@ function Home() {
     {
       question: "How Do I Know If I Should Go To Counseling?",
       answer:
-        "Counseling can be beneficial for individuals facing various challenges, such as stress, anxiety, depression, relationship issues, trauma, or personal growth. If you’re experiencing difficulties or seeking support, counseling provides a safe, confidential space to explore your thoughts and emotions.",
+        "Counseling can be beneficial for individuals facing various challenges, such as stress, anxiety, depression, relationship issues, trauma, or personal growth. If you're experiencing difficulties or seeking support, counseling provides a safe, confidential space to explore your thoughts and emotions.",
     },
     {
       question: "Is Counseling Confidential?",
@@ -135,24 +134,23 @@ function Home() {
             >
               <header>
                 <h1 id="hero-title" className="hero-section-heading mb-3">
-                  A <span className="high-light-words">Health</span> &{" "}
-                  <span className="high-light-words">Human</span> Services
-                  Organization
+                  Professional <span className="high-light-words">Mental Health</span> &{" "}
+                  <span className="high-light-words">Counseling</span> Services
                 </h1>
               </header>
               <p className="hero-section-taglines mb-4" itemProp="slogan">
-                Welcome to BrightPoint, your trusted destination for professional
-                mental health counseling services. Our team of experienced
-                counselors is committed to providing you with the assistance you
-                need when dealing with the issues of life.
+                Welcome to BrightPoint Counseling, your trusted destination for professional
+                mental health therapy and counseling services. Our team of experienced
+                therapists is committed to providing compassionate support for anxiety, depression,
+                stress, and life's challenges in a confidential environment.
               </p>
               <div className="cta-wrap">
                 <a
                   href="#services"
                   className="btn cta-btn btn-sm text-uppercase"
-                  aria-label="Learn more about our counseling services"
+                  aria-label="Explore mental health counseling services"
                 >
-                  <span>Learn More</span>
+                  <span>Explore Therapy Services</span>
                   <FiPlay className="cta-icon" aria-hidden="true" />
                 </a>
               </div>
@@ -164,7 +162,7 @@ function Home() {
             >
               <img
                 src={HeroSectionImage}
-                alt="Doctor representing BrightPoint mental health counseling services"
+                alt="Therapist providing mental health counseling services at BrightPoint"
                 className="doctor-image"
                 loading="eager"
                 decoding="async"
@@ -190,7 +188,7 @@ function Home() {
         <div className="container">
           <div className="row justify-content-center">
             <h2 className="services-title mt-5">
-              Our <span className="high-light-words">Key Services</span>
+              Our <span className="high-light-words">Key Therapy Services</span>
             </h2>
           </div>
           <div className="row services-grid tight-gutters justify-content-center mt-5">
@@ -202,7 +200,7 @@ function Home() {
                 <div className="service-icon-wrap mb-3" aria-hidden="true">
                   <img
                     src={svc.icon}
-                    alt=""
+                    alt={`${svc.name} therapy service for mental health`}
                     className="service-icon"
                     loading="lazy"
                     decoding="async"
@@ -222,7 +220,7 @@ function Home() {
             >
               <img
                 src={ServicesImage}
-                alt="Counseling services at BrightPoint for emotional balance and resilience"
+                alt="Mental health therapy services at BrightPoint for emotional balance"
                 className="doctor-image"
                 loading="lazy"
                 decoding="async"
@@ -238,9 +236,9 @@ function Home() {
                   id="services-title"
                   className="hero-section-heading mb-3"
                 >
-                  Discover Inner Peace Through{" "}
+                  Discover Inner Peace with{" "}
                   <span className="high-light-words">
-                    Compassionate Counseling
+                    Compassionate Mental Health Counseling
                   </span>
                 </h1>
               </header>
@@ -248,19 +246,17 @@ function Home() {
                 className="hero-section-taglines mb-4"
                 itemProp="slogan"
               >
-                At BrightPoint, we offer compassionate counseling to guide you
-                toward emotional balance and resilience. Our dedicated team is
-                here to support you through life's challenges with personalized
-                care.
+                At BrightPoint Counseling, we offer compassionate mental health therapy to guide you
+                toward emotional balance, resilience, and personal growth. Our dedicated therapists support you through anxiety, depression, and life's challenges with personalized counseling care.
               </p>
               <div className="cta-wrap">
                 <a
                   href="#services"
                   className="btn cta-btn text-uppercase btn-sm"
-                  aria-label="Learn more about our counseling services"
+                  aria-label="Discover mental health counseling services"
                 >
-                  <span>Learn More</span>
-                  <FiPlay className="cta-icon" aria-hidden="true" />
+                  <span>Discover Counseling Services</span>
+                  <FiBookOpen className="cta-icon" aria-hidden="true" />
                 </a>
               </div>
             </article>
@@ -278,7 +274,7 @@ function Home() {
           <div className="row hero-row align-items-center g-1 px-3 px-lg-4 text-center">
             <h1 id="faq-title" className="services-title">
               Frequently Asked{" "}
-              <span className="high-light-words">Questions</span>
+              <span className="high-light-words">Questions About Therapy</span>
             </h1>
           </div>
           <div className="row justify-content-center mt-5">
@@ -331,7 +327,7 @@ function Home() {
           {/* Contact Info Columns */}
           <div className="row hero-row align-items-center g-1 px-3 px-lg-4">
             <h1 id="contact-title" className="hero-section-heading mb-3 order-1 text-center">
-              Contact Us <span className="high-light-words">Today</span>
+              Contact <span className="high-light-words">Mental Health Therapists</span> Today
             </h1>
             <article
               ref={contactTextRef}
@@ -339,30 +335,30 @@ function Home() {
               itemProp="description"
             >
               <p className="hero-section-taglines mb-4">
-                Ready to take the next step toward a happy and healthier life?
-                Don’t wait any longer begin your journey with BrightPoint Wellness
-                today. Seeking counseling services can bring numerous benefits,
+                Ready to take the next step toward better mental health and wellness?
+                Don't wait any longer—begin your journey with BrightPoint Counseling
+                today. Seeking professional therapy services can bring numerous benefits,
                 including:
               </p>
               <ul className="contact-benefits mb-4">
-                <li>Enhanced self-awareness and personal growth.</li>
-                <li>Better handling skills and ability to bounce back.</li>
-                <li>Better communication and ties.</li>
-                <li>Stress, anxiety, and sadness were all lessened.</li>
-                <li>Better general health and happiness in life.</li>
+                <li>Enhanced self-awareness and personal growth through counseling.</li>
+                <li>Better coping skills and resilience for stress and anxiety.</li>
+                <li>Improved communication and stronger relationships.</li>
+                <li>Reduced symptoms of stress, anxiety, and depression.</li>
+                <li>Greater overall mental health and life satisfaction.</li>
               </ul>
               <p className="hero-section-taglines mb-4">
-                Act now and make your mental health a top priority. Click the
-                button below to make an appointment or to get more information.
+                Act now and prioritize your mental well-being. Schedule a therapy appointment
+                or get more information about our counseling services below.
               </p>
               <div className="cta-wrap">
                 <a
                   href="#contact"
                   className="btn cta-btn text-uppercase btn-sm"
-                  aria-label="Learn more or make an appointment"
+                  aria-label="Schedule mental health therapy appointment"
                 >
-                  <span>Learn More</span>
-                  <FiPlay className="cta-icon" aria-hidden="true" />
+                  <span>Schedule Therapy Appointment</span>
+                  <FiCalendar className="cta-icon" aria-hidden="true" />
                 </a>
               </div>
             </article>
@@ -373,7 +369,7 @@ function Home() {
             >
               <img
                 src={ContactImage}
-                alt="Contact BrightPoint Wellness for mental health counseling"
+                alt="Contact BrightPoint for professional mental health counseling"
                 className="doctor-image"
                 loading="lazy"
                 decoding="async"
@@ -385,14 +381,14 @@ function Home() {
             <figure className="col-12 col-lg-6 hero-visual m-0 contact-form-img-col order-1">
               <img
                 src={FormImage}
-                alt="Contact form illustration"
+                alt="Contact form for mental health therapy inquiries"
                 className="doctor-image"
                 loading="lazy"
                 decoding="async"
               />
             </figure>
             <div className="col-12 col-lg-6 contact-form-col order-2">
-              <h2 className="contact-form-heading mb-4">Give us a Message</h2>
+              <h2 className="contact-form-heading mb-4">Send Therapy Inquiry Message</h2>
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group mb-3">
                   <label htmlFor="name" className="form-label">
@@ -442,8 +438,8 @@ function Home() {
                 </div>
                 <div className="form-group mb-3">
                   <label htmlFor="message" className="form-label">
-                    <FiMessageSquare className="form-icon" aria-hidden="true" />
-                    Your Message <span className="text-danger">(required)</span>
+                    <FiHelpCircle className="form-icon" aria-hidden="true" />
+                    Your Therapy Message <span className="text-danger">(required)</span>
                   </label>
                   <textarea
                     id="message"
@@ -459,9 +455,9 @@ function Home() {
                   <button
                     type="submit"
                     className="btn cta-btn text-uppercase btn-sm"
-                    aria-label="Send your message"
+                    aria-label="Submit mental health inquiry"
                   >
-                    <span>Send</span>
+                    <span>Submit Inquiry</span>
                     <FiSend className="cta-icon" aria-hidden="true" />
                   </button>
                 </div>

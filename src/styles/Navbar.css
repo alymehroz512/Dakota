@@ -1,84 +1,100 @@
-/* Import Nunito font */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
-/* Apply Nunito inside navbar */
+/* Import Quicksand font */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+/* Apply Quicksand inside navbar */
 .fp-navbar,
 .fp-navbar * {
-  font-family: "Nunito" !important;
+  font-family: "Quicksand", sans-serif !important;
 }
-/* ===== Sticky navbar ===== */
+
+/* Sticky navbar */
 .fp-navbar {
   position: -webkit-sticky; /* Safari support */
   position: sticky;
   top: 0;
   z-index: 1050;
-  background: rgba(255, 255, 255, 0.85);
+  background: #ffffff;
   box-shadow: none;
-  padding: 20px 0; /* instead of fixed height */
-  border-bottom: 1px solid #1693d3; /* Border-bottom replacing fp-hrline */
-  margin-left: 60px; /* Desktop side gutter */
-  margin-right: 60px; /* Desktop side gutter */
+  padding: 20px 0;
+  border-bottom: 1px solid #1693d3;
+  margin-left: 60px;
+  margin-right: 60px;
 }
+
 /* Allow absolute positioning of elements relative to the container */
 .fp-navbar .container-fluid {
   position: relative;
 }
+
 /* Logo sizing + positioning */
 .fp-logo {
   width: 228px;
   height: 48px;
   object-fit: contain;
   position: relative;
-  top: 10px;
+  top: 0px;
   left: 10px;
 }
+
 /* Nav links wrapper */
 .fp-nav {
   position: relative;
-  top: 15px;
+  top: 0px;
 }
-/* Drop-in animation */
-@keyframes fp-drop-in {
-  from { transform: translateY(-12px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-.fp-nav.animate .nav-item {
-  will-change: transform, opacity;
-  opacity: 0;
-  animation: fp-drop-in 760ms ease-out forwards;
-}
-.fp-nav.animate .nav-item:nth-child(1) { animation-delay: 0ms; }
-.fp-nav.animate .nav-item:nth-child(2) { animation-delay: 70ms; }
-.fp-nav.animate .nav-item:nth-child(3) { animation-delay: 140ms; }
-.fp-nav.animate .nav-item:nth-child(4) { animation-delay: 210ms; }
-/* Reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  .fp-nav.animate .nav-item { animation: none; opacity: 1; }
-}
-/* Nav Links */
+
+/* Nav Links with left-to-right fill */
 .fp-nav .nav-link {
   position: relative;
   color: #141414 !important;
   font-size: 22px;
   font-weight: 500;
   line-height: 1;
-  padding: 0.5rem 0.9rem;
-  transition: color 0.2s ease, transform 0.15s ease, background-color 0.2s ease;
-  border-radius: 5px; 
+  /* padding: 0.5rem 0.9rem; */
+  transition: color 0.2s ease, transform 0.15s ease;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
 }
+
+/* Background sliding fill */
+.fp-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #1693d3;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+/* Hover and focus */
 .fp-nav .nav-link:hover,
 .fp-nav .nav-link:focus {
-  color: #ffffff !important; /* White text on hover */
-  background-color: #1693d3; 
+  color: #ffffff !important;
 }
+
+.fp-nav .nav-link:hover::before,
+.fp-nav .nav-link:focus::before {
+  width: 100%;
+}
+
+/* Active state */
 .fp-nav .nav-link.active {
-  color: #ffffff !important; /* White text for active state */
-  background-color: #1693d3; /* Blue background for active */
+  color: #ffffff !important;
 }
+
+.fp-nav .nav-link.active::before {
+  width: 100%;
+}
+
 /* Ensure the collapse panel overlays content */
 .fp-collapse-panel {
   position: relative;
-  z-index: 3; /* ABOVE other content */
+  z-index: 3;
 }
+
 /* Custom toggler */
 .fp-toggler {
   border: none !important;
@@ -88,9 +104,17 @@
   background: transparent !important;
   color: #141414;
 }
-.fp-toggler:focus { outline: none !important; box-shadow: none !important; }
+
+.fp-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Hide Bootstrap's default hamburger icon */
-.navbar-toggler .navbar-toggler-icon { display: none !important; }
+.navbar-toggler .navbar-toggler-icon {
+  display: none !important;
+}
+
 /* Toggler icon */
 .fp-icon {
   width: 28px;
@@ -98,44 +122,26 @@
   display: block;
   color: #1693d3;
 }
-/* ===== Social icons ===== */
-.fp-social {
-  position: relative;
-  top: 15px;
-  gap: 10px;
-  margin-right: 20px;
-}
-.fp-social-btn {
-  width: 36px;
-  height: 36px;
-  background: #1693d3;
-  color: #ffffff !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none !important;
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-  border-radius: 50%;
-}
-.fp-social-btn:hover,
-.fp-social-btn:focus {
-  transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 6px 16px rgba(22, 147, 211, 0.25);
-}
-/* ---------- Mobile menu background ---------- */
+
+/* Mobile menu background */
 @media (max-width: 991.98px) {
   .fp-collapse-panel {
-    background: rgba(255, 255, 255, 0.96);
     margin-top: 20px;
     padding: 12px 10px 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
-  #fpNavbar .navbar-nav { align-items: center; }
+  #fpNavbar .navbar-nav {
+    align-items: center;
+  }
 }
-/* ---------- Responsive tweaks for navbar border & layout ---------- */
+
+/* Responsive tweaks for navbar border & layout */
 @media (max-width: 1199.98px) {
-  .fp-navbar { margin-left: 60px; margin-right: 60px; }
+  .fp-navbar {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
 }
+
 @media (max-width: 991.98px) {
   .fp-logo {
     top: 8px;
@@ -143,8 +149,12 @@
     width: 190px;
     height: 42px;
   }
-  .fp-navbar { margin-left: 20px; margin-right: 20px; }
+  .fp-navbar {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
+
 @media (max-width: 575.98px) {
   .fp-logo {
     top: 6px;
@@ -152,21 +162,47 @@
     width: 170px;
     height: 40px;
   }
-  .fp-nav .nav-link { font-size: 20px; }
-  .fp-navbar { margin-left: 16px; margin-right: 16px; }
+  .fp-nav .nav-link {
+    font-size: 20px;
+  }
+  .fp-navbar {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
+
 @media (max-width: 768px) {
-  .fp-icon { margin-right: 10px; }
-  .fp-logo { left: 10px; }
+  .fp-icon {
+    margin-right: 10px;
+  }
+  .fp-logo {
+    left: 10px;
+  }
 }
+
 @media (max-width: 425px) {
-  .fp-icon { margin-right: 0; }
-  .fp-logo { left: 0; }
-  .fp-navbar { margin-left: 16px; margin-right: 16px; }
+  .fp-icon {
+    margin-right: 0;
+  }
+  .fp-logo {
+    left: 0;
+  }
+  .fp-navbar {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
+
 @media (max-width: 375px) {
-  .fp-navbar { margin-left: 14px; margin-right: 14px; }
+  .fp-navbar {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
 }
+
 @media (max-width: 320px) {
-  .fp-navbar { margin-left: 12px; margin-right: 12px; }
+  .fp-navbar {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
