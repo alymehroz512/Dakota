@@ -4,7 +4,7 @@
 /* Apply Quicksand inside navbar */
 .fp-navbar,
 .fp-navbar * {
-  font-family: "Quicksand", sans-serif !important;
+  font-family: 'Quicksand' !important;
 }
 
 /* Sticky navbar */
@@ -46,13 +46,14 @@
 .fp-nav .nav-link {
   position: relative;
   color: #141414 !important;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  /* padding: 0.5rem 0.9rem; */
+  padding: 0.5rem 0.9rem;
   transition: color 0.2s ease, transform 0.15s ease;
   overflow: hidden;
   z-index: 1;
+  text-transform: uppercase;
 }
 
 /* Background sliding fill */
