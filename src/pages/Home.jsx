@@ -335,7 +335,7 @@ function Home() {
         <meta itemProp="name" content="BrightPoint Wellness Contact" />
         <div className="container-fluid">
           {/* Contact Info Columns */}
-          <div className="row hero-row align-items-center g-1 px-3 px-lg-4 mt-5">
+          <div className="row hero-row align-items-center g-1 px-3 px-lg-4 mt-5 mb-5">
             <h1 id="contact-title" className="hero-section-heading mb-3 order-1 text-center">
               Contact <span className="high-light-words">Mental Health Therapists</span> Today
             </h1>
@@ -387,7 +387,7 @@ function Home() {
             </figure>
           </div>
           {/* Form Columns */}
-          <div className="row hero-row g-1 px-3 px-lg-4 mt-5">
+          <div className="row hero-row g-1 px-3 px-lg-4 mt-5 mb-5">
             <figure className="col-12 col-lg-6 hero-visual m-0 contact-form-img-col order-1">
               <img
                 src={FormImage}

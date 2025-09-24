@@ -90,12 +90,11 @@
   cursor: pointer;
 }
 
-.about-principle-icon,
-.about-mission-icon {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
+.about-principle-icon {
+  width: 100px;
+  height: 100px;
   transition: transform 0.3s ease, filter 0.3s ease;
+  color: #1693d3;
   cursor: pointer;
 }
 
@@ -156,27 +155,42 @@
 
 .about-services-title {
   font-size: 44px;
-  text-align: left;
   font-weight: 700;
   line-height: 1.25;
   color: #141414;
   margin-bottom: 6px;
 }
 
-/* Center the mission title */
-#about-mission-title {
-  text-align: center;
+.about-core-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #141414;
+  margin-bottom: 6px;
 }
 
-/* Ensure consistent spacing for columns */
-.about-principle-col,
-.about-vision-col,
-.about-compassion-col,
-.about-excellence-col,
-.about-patient-centered-col,
-.about-accessibility-col {
-  padding-left: 15px;
-  padding-right: 15px;
+/* Animated Card Styles */
+.animated-card {
+  background: #ffffff;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(22, 147, 211, 0.3);
 }
 
 /* ===== Responsive type & spacing ===== */
@@ -188,12 +202,18 @@
   .about-services-title {
     font-size: 36px;
   }
+  .about-core-title {
+    font-size: 30px;
+  }
   .about-hero-taglines {
     font-size: 18px;
   }
   .about-hero-visual::before {
     width: 80%;
     height: 80%;
+  }
+  .animated-card {
+    padding: 1.5rem;
   }
 }
 
@@ -206,6 +226,13 @@
     width: 70%;
     height: 70%;
   }
+  .about-principle-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .animated-card {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 575px) {
@@ -214,6 +241,9 @@
   }
   .about-services-title {
     font-size: 28px;
+  }
+  .about-core-title {
+    font-size: 24px;
   }
   .about-hero-taglines {
     font-size: 16px;
@@ -227,10 +257,9 @@
     width: 60%;
     height: 60%;
   }
-  .about-principle-icon,
-  .about-mission-icon {
-    width: 150px;
-    height: 150px;
+  .about-principle-icon {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -257,5 +286,104 @@
 @media (max-width: 480px) {
   .custom-hr {
     width: 90%;
+  }
+}
+
+/* ===== Vision / Mission / Principles Timeline ===== */
+.vmp-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* number badges: now squared */
+.circle {
+  padding: 13px 25px;
+  border-radius: 0;          /* removed roundness */
+  background-color: #1693d3;
+  color: #fff;
+  max-height: 80px;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.how-it-works.row .col-2 {
+  align-self: stretch;
+  position: relative; /* for ::after positioning */
+}
+
+.how-it-works.row .col-2::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #1693d3;
+  z-index: 1;
+}
+
+.how-it-works.row .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+
+.how-it-works.row .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+
+.how-it-works.row .col-2.top::after {
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+
+.timeline hr {
+  border-top: 3px solid #1693d3;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+
+/* connector corners: now squared (no radius) */
+.timeline .corner {
+  border: 3px solid #1693d3;
+  width: 100%;
+  position: relative;
+  border-radius: 0;          /* removed roundness */
+}
+
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
+/* Small-screen niceties for spacing */
+@media (max-width: 767.98px) {
+  .vmp-container h2 {
+    margin-bottom: 2rem !important;
   }
 }
