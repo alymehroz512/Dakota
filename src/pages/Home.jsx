@@ -135,8 +135,8 @@ function Home() {
           itemProp="description"
           content="Professional mental health counseling services. Experienced counselors helping with anxiety, depression, and life challenges."
         />
-        <div className="container-fluid">
-          <div className="row hero-row align-items-center g-1 px-3 px-lg-4">
+        <div className="container-fluid mt-3 mb-5">
+          <div className="row hero-row mt-5 mb-5 align-items-center g-1 px-3 px-lg-4">
             <article
               ref={heroTextRef}
               className="col-12 col-lg-6 hero-copy my-3 order-2 order-lg-1 text-start"
