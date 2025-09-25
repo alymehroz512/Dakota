@@ -1,8 +1,8 @@
 // Contact.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { FiSend, FiUser, FiMail, FiTag, FiMessageSquare, FiCalendar, FiHelpCircle, FiPhone, FiMapPin } from "react-icons/fi";
-import ContactHeroImage from "../assets/home/Doctor.gif";
-import FormImage from "../assets/home/Form.gif";
+import ContactHeroImage from "../assets/contact/Contact.gif";
+import FormImage from "../assets/contact/Form.gif";
 import "../styles/Contact.css";
 
 function Contact() {
@@ -148,7 +148,7 @@ function Contact() {
               />
             </figure>
             <div className="col-12 col-lg-6 contact-form-col order-2">
-              <h2 className="contact-form-heading mb-4" id="form-title">Send Your Inquiry</h2>
+              <h2 className="contact-form-heading mb-4" id="form-title">Let's Connect With Psychiatrists</h2>
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group mb-3">
                   <label htmlFor="name" className="form-label">
