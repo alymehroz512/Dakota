@@ -134,7 +134,7 @@ function Services() {
                 support your journey forward.
               </p>
 
-              <ul className="services-hero-bullets mb-4">
+              <ul className="contact-benefits mb-4" style={{fontSize: '20px'}}>
                 <li>Intensive Outpatient Program (IOP)</li>
                 <li>Individual & Group Counseling</li>
                 <li>Tele-health & In-clinic Sessions</li>
