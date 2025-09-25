@@ -68,13 +68,13 @@ function Contact() {
               <p className="contact-hero-taglines mb-4">
                 Reach out for online psychiatric consultations, therapy sessions, or general inquiries. Our team is here to support your mental health journey.
               </p>
-              <ul className="contact-benefits mb-4">
+              <ul className="contact-benefits mb-4" style={{fontSize: '20px'}}>
                 <li>Confidential and secure communications.</li>
                 <li>Quick response times.</li>
                 <li>Easy scheduling for virtual appointments.</li>
                 <li>Support for insurance and payment queries.</li>
               </ul>
-              <div className="contact-cta-wrap">
+              {/* <div className="contact-cta-wrap">
                 <a
                   href="#form"
                   className="btn contact-cta-btn btn-sm text-uppercase"
@@ -83,7 +83,7 @@ function Contact() {
                   <span>Schedule Now</span>
                   <FiCalendar className="contact-cta-icon" aria-hidden="true" />
                 </a>
-              </div>
+              </div> */}
             </article>
             <figure
               ref={heroImgWrapRef}

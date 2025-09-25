@@ -95,6 +95,7 @@
   align-items: start;
   gap: 6px;
   margin-right: 60px;
+  font-weight: 500;
   text-transform: uppercase;
   transition: color .2s ease, transform .2s ease;
 }

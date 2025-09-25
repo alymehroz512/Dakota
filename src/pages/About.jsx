@@ -73,7 +73,7 @@ function About() {
         <div
           className="container-fluid"
         >
-          <div className="row about-hero-row align-items-center g-1 px-3 px-lg-4">
+          <div className="row mb-5 about-hero-row align-items-center g-1 px-3 px-lg-4">
             <article
               ref={heroTextRef}
               className="col-12 col-lg-6 about-hero-copy my-3 order-2 order-lg-1 text-start"
@@ -96,7 +96,7 @@ function About() {
               </p>
               <div className="about-cta-wrap">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="btn about-cta-btn btn-sm text-uppercase"
                   aria-label="Connect with BrightPoint Wellness for mental health counseling and compassionate care"
                 >
@@ -191,7 +191,7 @@ function About() {
               </p>
               <div className="about-cta-wrap">
                 <a
-                  href="#contact"
+                  href="/services"
                   className="btn about-cta-btn text-uppercase btn-sm"
                   aria-label="Explore our comprehensive mental health counseling and healthcare services programs"
                 >

@@ -135,7 +135,7 @@ function Home() {
           itemProp="description"
           content="Professional mental health counseling services. Experienced counselors helping with anxiety, depression, and life challenges."
         />
-        <div className="container-fluid mt-3 mb-5">
+        <div className="container-fluid mt-3 mb-3">
           <div className="row hero-row mt-5 mb-5 align-items-center g-1 px-3 px-lg-4">
             <article
               ref={heroTextRef}
@@ -156,7 +156,7 @@ function Home() {
               </p>
               <div className="cta-wrap">
                 <a
-                  href="#services"
+                  href="/services"
                   className="btn cta-btn btn-sm text-uppercase"
                   aria-label="Explore mental health counseling services"
                 >
@@ -261,7 +261,7 @@ function Home() {
               </p>
               <div className="cta-wrap">
                 <a
-                  href="#services"
+                  href="/services"
                   className="btn cta-btn text-uppercase btn-sm"
                   aria-label="Discover mental health counseling services"
                 >
@@ -350,7 +350,7 @@ function Home() {
                 today. Seeking professional therapy services can bring numerous benefits,
                 including:
               </p>
-              <ul className="contact-benefits mb-4">
+              <ul className="contact-benefits mb-4" style={{fontSize: '20px'}}>
                 <li>Enhanced self-awareness and personal growth through counseling.</li>
                 <li>Better coping skills and resilience for stress and anxiety.</li>
                 <li>Improved communication and stronger relationships.</li>
@@ -363,7 +363,7 @@ function Home() {
               </p>
               <div className="cta-wrap">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="btn cta-btn text-uppercase btn-sm"
                   aria-label="Schedule mental health therapy appointment"
                 >
